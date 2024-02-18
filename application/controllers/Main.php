@@ -2,7 +2,7 @@
 
 require_once 'Base.php';
 
-class Main extends Base {
+class Main extends CI_Controller {
 
 	public function index()
 	{
