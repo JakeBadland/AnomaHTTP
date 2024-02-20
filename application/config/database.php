@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => '',
 	'password' => '',
-	'database' => '',
+	'database' => 'anoma',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -94,3 +94,10 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+$db['local'] = $db['default'];
+$db['local']['username'] = 'root';
+
+if (strpos($_SERVER['HTTP_HOST'], '.loc') !== false){
+	$active_group = 'local';
+}
