@@ -22,3 +22,5 @@
 
 </head>
 <body>
+<div class="container main-outer">
+	<div class="main-inner">

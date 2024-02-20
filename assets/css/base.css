@@ -17,11 +17,11 @@ body {
 	height: 100%;
 }
 
-.outer {
+.main-outer {
 	width: 100%;
 	height: 100%;
 	padding: 14px;
-	background-color: #444444;
+	background-color: #333333;
 	/*border: 4px solid #555555;*/
 	/*border-right-color: #222222;*/
 	/*border-bottom-color: #222222;*/
@@ -30,7 +30,7 @@ body {
 	box-sizing: border-box; /* Opera/IE 8+ */
 }
 
-.inner {
+.main-inner {
 	width: 100%;
 	height: 100%;
 	background-color: #333333;

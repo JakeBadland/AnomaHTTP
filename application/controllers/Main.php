@@ -1,32 +1,45 @@
 <?php
 
-require_once 'Base.php';
-
-class Main extends CI_Controller {
+class Main extends BaseController {
 
 	public function index()
 	{
-		die('index');
+		die(__METHOD__);
 	}
 
 	public function screen()
 	{
-		if ($this->input->method() == 'post'){
-			$data = $this->input->post();
+
+		if ($_POST){
+			$data = $_POST;
 
 			$sql = "SELECT * FROM screens WHERE width = {$data['width']} AND height = {$data['height']}";
 			$query = $this->db->query($sql);
 
 			if ($query->result()){
-				$sql = "UPDATE screens SET count = count + 1 WHERE width = {$data['width']} AND height = {$data['height']}";
+				$sql = "UPDATE screens 
+					SET 
+					    count = count + 1 
+					WHERE width = {$data['width']} AND height = {$data['height']}";
 			} else {
-				$sql = "INSERT INTO screens SET width = {$data['width']}, height = {$data['height']}, count = 1";
+				$sql = "INSERT INTO screens 
+					SET 
+						width = {$data['width']},
+					    height = {$data['height']},
+					    system = '{$data['system']}',
+					    count = 1";
 			}
 
 			$this->db->query($sql);
+			die();
 		}
 
-		$this->load->view('screen');
+		$sql = "SELECT * FROM screens ORDER BY count DESC LIMIT 10";
+		$query = $this->db->query($sql);
+
+		$data['sizes'] = $query->result();
+
+		$this->load->view('screen', ['data' => $data]);
 	}
 
 	public function dbTest()

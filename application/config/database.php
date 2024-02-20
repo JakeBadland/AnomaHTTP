@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => 'anoma',
+	'hostname' => 'sql211.infinityfree.com',
+	'username' => 'if0_35979069',
+	'password' => 'RLuoF0d6Jta',
+	'database' => 'if0_35979069_anoma',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -96,7 +96,10 @@ $db['default'] = array(
 );
 
 $db['local'] = $db['default'];
+$db['local']['hostname'] = 'localhost';
 $db['local']['username'] = 'root';
+$db['local']['password'] = '';
+$db['local']['database'] = 'anoma';
 
 if (strpos($_SERVER['HTTP_HOST'], '.loc') !== false){
 	$active_group = 'local';

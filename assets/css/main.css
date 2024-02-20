@@ -1,0 +1,63 @@
+.main-inner{
+	background-image: url("/assets/img/back.png");
+	background-position: center;
+}
+
+.login-box{
+	width: 70%;
+	padding: 16px;
+	margin: 20% auto 0 auto;
+}
+
+input {
+	background-color: #222222;
+	color : #CCCCCC;
+	height: 36px;
+	font-size: large;
+}
+
+.input-line{
+	margin-top: 8px;
+}
+
+.input-line input{
+	width: 100%;
+}
+
+.input-line input[type="text"]:hover {
+	background-color: #111111;
+}
+
+.input-line input[type="password"]:hover {
+	background-color: #111111;
+}
+
+.input-line input[type="submit"]:hover {
+	background-color: #666666;
+}
+
+.input-line input[type="submit"]:active {
+	box-shadow:
+			inset -2px -2px 3px rgb(255 255 255 / 60%),
+			inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+
+.input-line .inner{
+	background-color: #333333;
+	border: 4px solid #222222;
+	border-right-color: #555555;
+	border-bottom-color: #555555;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.input-line .outer{
+	background-color: #333333;
+	border: 4px solid #555555;
+	border-right-color: #222222;
+	border-bottom-color: #222222;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+}
